@@ -1,0 +1,120 @@
+body {
+    background-color: #fff8f4;
+    font-family: 'Lora', serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: linear-gradient(135deg, #fff0f5 0%, #fce4ec 100%);
+}
+
+.invitation-card {
+    background: white;
+    background-image: url('wedding-background-image.jpg'); /* Optional */
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    max-width: 480px;
+    aspect-ratio: 2 / 3;
+    border-radius: 25px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 90px 30px 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Overlay for soft gradient */
+.invitation-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.65));
+    z-index: 1;
+    border-radius: 25px;
+    backdrop-filter: blur(2px);
+}
+
+.content {
+    position: relative;
+    text-align: center;
+    color: #5e4035;
+    max-width: 90%;
+    z-index: 2;
+}
+
+.couple-name {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.5em;
+    color: #8b3c4a;
+    margin-bottom: 0.2em;
+    text-shadow: 0 1px 3px rgba(255, 255, 255, 0.7);
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2em;
+    font-weight: 700;
+    margin-bottom: 1em;
+    color: #4a2c2a;
+}
+
+p {
+    font-size: 1.05em;
+    line-height: 1.6;
+    margin-bottom: 1em;
+}
+
+.details {
+    font-weight: 600;
+    font-size: 1em;
+    margin-bottom: 1em;
+    background: rgba(255, 255, 255, 0.55);
+    padding: 8px 16px;
+    border-radius: 10px;
+    color: #6d4c41;
+    display: inline-block;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.rsvp-button {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: #a05a5a;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 32px;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 25px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    font-family: 'Lora', serif;
+}
+
+.rsvp-button:hover {
+    background-color: #8b4444;
+    transform: scale(1.05);
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.7em;
+    }
+
+    .couple-name {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 0.95em;
+    }
+
+    .invitation-card {
+        padding: 60px 20px 30px;
+    }
+}
